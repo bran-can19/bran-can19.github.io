@@ -5,8 +5,8 @@ const projects = [
   {
     title: "AutoPark",
     description:
-      "Proyecto integrador multiplataforma de estacionamiento inteligente. Conecta una aplicación móvil con hardware físico para gestionar espacios en tiempo real.",
-    image: "/projects/project2.png",
+      "Proyecto integrador multiplataforma de estacionamiento inteligente. Conecta una aplicación móvil con hardware físico para...",
+    image: "/src/assets/Proyecto AutoPark.png", // o "assets/Proyecto AutoPark.png" según tu configuración de Vite
     tags: ["Flutter", "Firebase", "ESP8266", "Dart"],
     link: "#",
     github: "https://github.com/bran-can19",
@@ -14,8 +14,8 @@ const projects = [
   {
     title: "Sistema de Inventario Municipal",
     description:
-      "Aplicación web desarrollada para la Presidencia Municipal de Emiliano Zapata, Tlaxcala, automatizando el control, abastecimiento y registro de bienes.",
-    image: "/projects/project3.png",
+      "Aplicación web desarrollada para la Presidencia Municipal de Emiliano Zapata, Tlaxcala, automatizando el control, abastecimiento y rep...",
+    image: "/src/assets/Proyecto de Inventario.png",
     tags: ["Python", "Python Ninja", "PostgreSQL", "JavaScript"],
     link: "#",
     github: "https://github.com/bran-can19",
@@ -23,13 +23,13 @@ const projects = [
   {
     title: "Tienda Comunitaria Diconsa",
     description:
-      "Sistema integrador desarrollado para la gestión y control de una tienda comunitaria, automatizando los procesos de inventario y optimizando la administración local.",
-    image: "/projects/project1.png",
+      "Sistema integrador desarrollado para la gestión y control de una tienda comunitaria, automatizando los procesos de inventario y optim...",
+    image: "/src/assets/Proyecto diconsa.png",
     tags: ["Python", "Flask", "PostgreSQL"],
     link: "#",
     github: "https://github.com/bran-can19",
   },
-];
+]
 
 export const Projects = () => {
   return (

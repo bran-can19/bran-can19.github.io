@@ -12,6 +12,9 @@ import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 // Importación de tu foto de perfil desde la carpeta assets
 import profileImg from "../assets/Yo.png";
 
+// Importación de tu CV en formato PDF desde la carpeta assets
+import cvPdf from "../assets/cv.PDF";
+
 const skills = [
   "Python",
   "Java",
@@ -101,10 +104,18 @@ export const Hero = () => {
               <Button size="lg">
                 Contáctame <ArrowRight className="w-5 h-5" />
               </Button>
-              <AnimatedBorderButton>
-                <Download className="w-5 h-5" />
-                Descargar CV
-              </AnimatedBorderButton>
+              
+              {/* Enlace contenedor para la descarga del CV */}
+              <a 
+                href={cvPdf} 
+                download="CV_Brandon_Candaneda_Gonzalez.pdf"
+                className="inline-block"
+              >
+                <AnimatedBorderButton>
+                  <Download className="w-5 h-5" />
+                  Descargar CV
+                </AnimatedBorderButton>
+              </a>
             </div>
 
             {/* Social Links */}
@@ -118,6 +129,8 @@ export const Hero = () => {
                 <a
                   key={idx}
                   href={social.href}
+                  target={social.href !== "#" ? "_blank" : undefined}
+                  rel={social.href !== "#" ? "noopener noreferrer" : undefined}
                   className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
                 >
                   {<social.icon className="w-5 h-5" />}
@@ -191,10 +204,8 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 
-      animate-fade-in animation-delay-800"
-      >
+      {/* Scroll Down Indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-800">
         <a
           href="#about"
           className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
