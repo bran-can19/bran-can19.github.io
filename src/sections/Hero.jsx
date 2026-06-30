@@ -7,13 +7,13 @@ import {
   Twitter,
   Download,
 } from "lucide-react";
-import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 
-// Importación de tu foto de perfil desde la carpeta assets
-import profileImg from "../assets/Yo.png";
+// Importación de tu foto de perfil utilizando alias
+import profileImg from "@/assets/Yo.png";
 
-// Importación de tu CV en formato PDF desde la carpeta assets
-import cvPdf from "../assets/cv.PDF";
+// LINEA 14 CORREGIDA: Extensión cambiada a .pdf en minúsculas y uso de alias 
+import cvPdf from "@/assets/cv.pdf";
 
 const skills = [
   "Python",
