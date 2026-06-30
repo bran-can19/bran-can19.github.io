@@ -6,15 +6,11 @@ import path from "path";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "./", // Fuerza rutas relativas para que funcione en GitHub Pages
+  // Al ser tu repositorio principal (bran-can19.github.io), la base debe ser la raíz '/'
+  base: "/", 
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
-    extensions: [".js", ".jsx", ".json"], // Asegura la resolución de extensiones
-  },
-  esbuild: {
-    loader: "jsx", // Fuerza al compilador a procesar la sintaxis JSX de forma estricta
-    include: /src\/.*\.jsx?$/, 
   },
 });
