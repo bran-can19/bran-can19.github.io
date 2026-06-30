@@ -1,26 +1,26 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0f1418;
-  --color-foreground: #f0f2f5;
+  --color-background: #0a0f1d; /* Azul oscuro profundo */
+  --color-foreground: #e2e8f0; /* Blanco azulado suave */
 
-  --color-card: #141a1f;
+  --color-card: #0f172a; /* Azul pizarra oscuro */
 
-  --color-primary: #20b2a6;
+  --color-primary: #3b82f6; /* Azul eléctrico vibrante */
   --color-primary-foreground: #ffffff;
 
-  --color-secondary: #1f2830;
-  --color-secondary-foreground: #20b2a6;
+  --color-secondary: #1e293b; /* Fondo secundario azul oscuro */
+  --color-secondary-foreground: #60a5fa; /* Azul claro brillante */
 
-  --color-muted: #252e37;
-  --color-muted-foreground: #7a8491;
+  --color-muted: #1e293b;
+  --color-muted-foreground: #94a3b8; /* Gris azulado apagado */
 
-  --color-border: #242b32;
+  --color-border: #334155;
 
   --radius: 0.75rem;
 
-  --color-highlight: #f5a623;
-  --color-surface: #1a2329;
+  --color-highlight: #38bdf8; /* Azul cielo para detalles llamativos */
+  --color-surface: #131e35;    /* Superficie para efectos de vidrio */
 }
 
 @layer base {
@@ -171,9 +171,10 @@
   }
 
   .animated-border:hover {
-    background-color: color-mix(in srgb, #26c4b8 15%, transparent);
+    /* Actualizado a azul traslúcido para mantener armonía */
+    background-color: color-mix(in srgb, #3b82f6 15%, transparent);
     backdrop-filter: blur(16px);
-    box-shadow: 0 0 20px color-mix(in srgb, #26c4b8 20%, transparent);
+    box-shadow: 0 0 20px color-mix(in srgb, #3b82f6 20%, transparent);
   }
 
   .timeline-glow {

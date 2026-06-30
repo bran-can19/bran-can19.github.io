@@ -1,17 +1,17 @@
 import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 
-// Las rutas correctas subiendo dos niveles con ../../
-import imgAutoPark from "../../assets/Proyecto AutoPark.png";
-import imgInventario from "../../assets/Proyecto de Inventario.png";
-import imgDiconsa from "../../assets/Proyecto diconsa.png";
+// Importaciones limpias apuntando a los nuevos nombres sin espacios
+import imgAutoPark from "@/assets/Proyecto-AutoPark.png";
+import imgInventario from "@/assets/Proyecto-de-Inventario.png";
+import imgDiconsa from "@/assets/Proyecto-diconsa.png";
 
 const projects = [
   {
     title: "AutoPark",
     description:
       "Proyecto integrador multiplataforma de estacionamiento inteligente. Conecta una aplicación móvil con hardware físico para...",
-    image: imgAutoPark, // <-- Usamos la variable importada
+    image: imgAutoPark,
     tags: ["Flutter", "Firebase", "ESP8266", "Dart"],
     link: "#",
     github: "https://github.com/bran-can19",
@@ -19,8 +19,8 @@ const projects = [
   {
     title: "Sistema de Inventario Municipal",
     description:
-      "Aplicación web desarrollada para la Presidencia Municipal de Emiliano Zapata, Tlaxcala, automatizando el control, abastecimiento y rep...",
-    image: imgInventario, // <-- Usamos la variable importada
+      "Aplicación web desarrollada para la Presidencia Municipal de Emiliano Zapata, Tlaxcala, automatizando el control, abastecimiento y reportes...",
+    image: imgInventario,
     tags: ["Python", "Python Ninja", "PostgreSQL", "JavaScript"],
     link: "#",
     github: "https://github.com/bran-can19",
@@ -28,8 +28,8 @@ const projects = [
   {
     title: "Tienda Comunitaria Diconsa",
     description:
-      "Sistema integrador desarrollado para la gestión y control de una tienda comunitaria, automatizando los procesos de inventario y optim...",
-    image: imgDiconsa, // <-- Usamos la variable importada
+      "Sistema integrador desarrollado para la gestión y control de una tienda comunitaria, automatizando los procesos de inventario y optimizando recursos.",
+    image: imgDiconsa,
     tags: ["Python", "Flask", "PostgreSQL"],
     link: "#",
     github: "https://github.com/bran-can19",
@@ -42,6 +42,7 @@ export const Projects = () => {
       {/* Bg glows */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" />
+      
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mx-auto max-w-3xl mb-16">
@@ -51,8 +52,7 @@ export const Projects = () => {
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
             Projects that
             <span className="font-serif italic font-normal text-white">
-              {" "}
-              make an impact.
+              {" "}make an impact.
             </span>
           </h2>
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
@@ -68,18 +68,15 @@ export const Projects = () => {
               className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1"
               style={{ animationDelay: `${(idx + 1) * 100}ms` }}
             >
-              {/* Image */}
+              {/* Image Container */}
               <div className="relative overflow-hidden aspect-video">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div
-                  className="absolute inset-0 
-                bg-gradient-to-t from-card via-card/50
-                  to-transparent opacity-60"
-                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-60" />
+                
                 {/* Overlay Links */}
                 <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <a
@@ -106,10 +103,7 @@ export const Projects = () => {
                     {project.title}
                   </h3>
                   <ArrowUpRight
-                    className="w-5 h-5 
-                  text-muted-foreground group-hover:text-primary
-                    group-hover:translate-x-1 
-                    group-hover:-translate-y-1 transition-all"
+                    className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
                   />
                 </div>
                 <p className="text-muted-foreground text-sm">
