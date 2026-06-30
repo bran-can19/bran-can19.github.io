@@ -34,6 +34,7 @@ jobs:
         run: npm install
 
       - name: Construir la aplicación (Build)
+        # Nota: Recuerda que Linux valida estrictamente mayúsculas/minúsculas en src/sections/Hero.jsx (.pdf)
         run: npm run build
 
       - name: Configurar GitHub Pages
